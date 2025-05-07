@@ -74,6 +74,41 @@ const invalidBookingJSON = `
 // ✅ Requirements
 // ============================================
 
+// CODE WITH CHANGES //
+{
+  "hotelName": "Grand City Hotel",
+  "checkInDate": "2024-05-15",
+  "checkOutDate": "2024-05-20",
+  "guests": [
+    {
+      "name": "Alice Johnson",
+      "age": 30,
+      "email": "alice.johnson@example.com"
+    },
+    {
+      "name": "Bob Smith",
+      "age": null,
+      "email": "bob.smith@example"
+    }
+  ],
+  "roomDetails": {
+    "type": "Suite",
+    "pricePerNight": 200,
+    "amenities": ["WiFi", "Breakfast", "Parking"]
+  }
+}
+
+// LIST OF CHANGES MADE (TOP-TO-BOTTOM)
+// delete [entire const invalidBookingJSON = `] row (this is JavaScript)
+// delete backtick after invalidBookingJSN (doesn't require backticks in syntax structure)
+// add comma after "checkInDate" value (must separate the objects from each other)
+// add quotations to "name" key of the first guest (JSON rules say so)
+// change the value of "age" from undefined to null in the second guest (JSON doesn't accept undefined as a value)
+// remove the comma after "Parking" in the amenities array (no trailing commas)
+// remove the backtick between the last closing brace and the semicolon (doesn't require backticks in syntax structure)
+// remove semicolon at the end of code (semicolons aren't necessary in JSON)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
 - Use a JSON validator or linter (e.g., https://jsonlint.com/) to test your final version
 - Keep track of each fix:
